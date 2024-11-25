@@ -1,7 +1,7 @@
 name: Fix CSS and JS code style issues
 
 on:
-  push: [main]
+  push:
   pull_request:
   workflow_dispatch:
 
