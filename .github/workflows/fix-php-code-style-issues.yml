@@ -2,7 +2,7 @@ name: Fix PHP code style issues
 
 on:
   push: [main]
-  pull_request: [main]
+  pull_request:
   workflow_dispatch:
 
 permissions:
