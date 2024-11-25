@@ -1,13 +1,14 @@
 {
     "name": "fluid-project/hearth-components",
-    "description": "This is my package hearth-components",
+    "description": "Robust components for the Laravel Framework.",
     "keywords": [
-        "Hearth",
+        "hearth",
         "laravel",
-        "hearth-components"
+        "blade",
+        "components"
     ],
     "homepage": "https://github.com/fluid-project/hearth-components",
-    "license": "MIT",
+    "license": "BSD-3-Clause",
     "authors": [
         {
             "name": "OCAD University",
