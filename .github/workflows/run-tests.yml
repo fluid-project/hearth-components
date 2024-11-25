@@ -53,7 +53,7 @@ jobs:
 
       - name: Execute tests
         run: vendor/bin/pest --ci
-        if: matrix.laravel != '11.*' matrix.php != 8.3 || matrix.stability != 'prefer-stable' || matrix.os != 'ubuntu-latest'
+        if: matrix.laravel != '11.*' && matrix.php != 8.3 || matrix.stability != 'prefer-stable' || matrix.os != 'ubuntu-latest'
 
       - name: Execute tests with coverage
         run: vendor/bin/pest --ci --coverage-clover coverage.xml
