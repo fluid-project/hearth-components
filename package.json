@@ -1,0 +1,35 @@
+{
+	"name": "hearth-components",
+	"version": "0.1.0",
+	"description": "Robust components for the Laravel Framework.",
+	"main": "index.js",
+	"type": "module",
+	"directories": {
+		"test": "tests"
+	},
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"prepare": "husky"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/fluid-project/hearth-components.git"
+	},
+	"keywords": ["hearth", "laravel", "blade", "components"],
+	"author": "OCAD University <idrc@ocadu.ca>",
+	"license": "BSD-3-Clause",
+	"bugs": {
+		"url": "https://github.com/fluid-project/hearth-components/issues"
+	},
+	"homepage": "https://github.com/fluid-project/hearth-components#readme",
+	"devDependencies": {
+		"@biomejs/biome": "1.9.4",
+		"@commitlint/cli": "19.6.0",
+		"@commitlint/config-conventional": "19.6.0",
+		"husky": "9.1.7",
+		"lint-staged": "15.2.10"
+	},
+	"lint-staged": {
+		"*.{css,js,json}": "npx @biomejs/biome check --write"
+	}
+}
