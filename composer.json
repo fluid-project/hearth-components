@@ -1,94 +1,85 @@
 {
-    "name": "fluid-project/hearth-components",
-    "description": "Robust components for the Laravel Framework.",
-    "keywords": [
-        "hearth",
-        "laravel",
-        "blade",
-        "components"
-    ],
-    "homepage": "https://github.com/fluid-project/hearth-components",
-    "license": "BSD-3-Clause",
-    "authors": [
-        {
-            "name": "OCAD University",
-            "email": "idrc@ocadu.ca",
-            "role": "Developer"
-        }
-    ],
-    "require": {
-        "php": "^8.2|^8.3",
-        "chinleung/laravel-locales": "^2.1",
-        "codezero/laravel-unique-translation": "^4.3",
-        "commerceguys/intl": "^2.0",
-        "illuminate/contracts": "^11.0",
-        "livewire/livewire": "^3.5",
-        "spatie/laravel-package-tools": "^1.16",
-        "spatie/laravel-sluggable": "^3.6",
-        "spatie/laravel-translatable": "^6.8"
-    },
-    "require-dev": {
-        "larastan/larastan": "^2.9",
-        "laravel/pint": "^1.14",
-        "nunomaduro/collision": "^8.1.1",
-        "orchestra/testbench": "^9.0.0",
-        "pestphp/pest": "^2.34",
-        "pestphp/pest-plugin-arch": "^2.7",
-        "pestphp/pest-plugin-laravel": "^2.3",
-        "phpstan/extension-installer": "^1.3",
-        "phpstan/phpstan-deprecation-rules": "^1.1",
-        "phpstan/phpstan-phpunit": "^1.3",
-        "spatie/laravel-ray": "^1.35"
-    },
-    "autoload": {
-        "psr-4": {
-            "HearthComponents\\": "src/"
-        },
-        "files": [
-            "src/helpers.php"
-        ]
-    },
-    "autoload-dev": {
-        "psr-4": {
-            "HearthComponents\\Tests\\": "tests",
-            "Workbench\\App\\": "workbench/app/"
-        }
-    },
-    "scripts": {
-        "post-autoload-dump": "@composer run prepare",
-        "clear": "@php vendor/bin/testbench package:purge-hearth-components --ansi",
-        "prepare": "@php vendor/bin/testbench package:discover --ansi",
-        "build": [
-            "@composer run prepare",
-            "@php vendor/bin/testbench workbench:build --ansi"
-        ],
-        "start": [
-            "Composer\\Config::disableProcessTimeout",
-            "@composer run build",
-            "@php vendor/bin/testbench serve"
-        ],
-        "analyse": "vendor/bin/phpstan analyse",
-        "test": "vendor/bin/pest",
-        "test-coverage": "vendor/bin/pest --coverage",
-        "format": "vendor/bin/pint"
-    },
-    "config": {
-        "sort-packages": true,
-        "allow-plugins": {
-            "pestphp/pest-plugin": true,
-            "phpstan/extension-installer": true
-        }
-    },
-    "extra": {
-        "laravel": {
-            "providers": [
-                "HearthComponents\\HearthComponentsServiceProvider"
-            ],
-            "aliases": {
-                "HearthComponents": "HearthComponents\\Facades\\HearthComponents"
-            }
-        }
-    },
-    "minimum-stability": "dev",
-    "prefer-stable": true
+	"name": "fluid-project/hearth-components",
+	"description": "Robust components for the Laravel Framework.",
+	"keywords": ["hearth", "laravel", "blade", "components"],
+	"homepage": "https://github.com/fluid-project/hearth-components",
+	"license": "BSD-3-Clause",
+	"authors": [
+		{
+			"name": "OCAD University",
+			"email": "idrc@ocadu.ca",
+			"role": "Developer"
+		}
+	],
+	"require": {
+		"php": "^8.2|^8.3",
+		"chinleung/laravel-locales": "^2.1",
+		"codezero/laravel-unique-translation": "^4.3",
+		"commerceguys/intl": "^2.0",
+		"illuminate/contracts": "^11.0",
+		"livewire/livewire": "^3.5",
+		"spatie/laravel-package-tools": "^1.16",
+		"spatie/laravel-sluggable": "^3.6",
+		"spatie/laravel-translatable": "^6.8"
+	},
+	"require-dev": {
+		"larastan/larastan": "^2.9",
+		"laravel/pint": "^1.14",
+		"nunomaduro/collision": "^8.1.1",
+		"orchestra/testbench": "^9.0.0",
+		"pestphp/pest": "^2.34",
+		"pestphp/pest-plugin-arch": "^2.7",
+		"pestphp/pest-plugin-laravel": "^2.3",
+		"phpstan/extension-installer": "^1.3",
+		"phpstan/phpstan-deprecation-rules": "^1.1",
+		"phpstan/phpstan-phpunit": "^1.3",
+		"spatie/laravel-ray": "^1.35"
+	},
+	"autoload": {
+		"psr-4": {
+			"HearthComponents\\": "src/"
+		},
+		"files": ["src/helpers.php"]
+	},
+	"autoload-dev": {
+		"psr-4": {
+			"HearthComponents\\Tests\\": "tests",
+			"Workbench\\App\\": "workbench/app/"
+		}
+	},
+	"scripts": {
+		"post-autoload-dump": "@composer run prepare",
+		"clear": "@php vendor/bin/testbench package:purge-hearth-components --ansi",
+		"prepare": "@php vendor/bin/testbench package:discover --ansi",
+		"build": [
+			"@composer run prepare",
+			"@php vendor/bin/testbench workbench:build --ansi"
+		],
+		"start": [
+			"Composer\\Config::disableProcessTimeout",
+			"@composer run build",
+			"@php vendor/bin/testbench serve"
+		],
+		"analyse": "vendor/bin/phpstan analyse",
+		"test": "vendor/bin/pest",
+		"test-coverage": "vendor/bin/pest --coverage",
+		"format": "vendor/bin/pint"
+	},
+	"config": {
+		"sort-packages": true,
+		"allow-plugins": {
+			"pestphp/pest-plugin": true,
+			"phpstan/extension-installer": true
+		}
+	},
+	"extra": {
+		"laravel": {
+			"providers": ["HearthComponents\\HearthComponentsServiceProvider"],
+			"aliases": {
+				"HearthComponents": "HearthComponents\\Facades\\HearthComponents"
+			}
+		}
+	},
+	"minimum-stability": "dev",
+	"prefer-stable": true
 }
