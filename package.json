@@ -8,7 +8,10 @@
 		"test": "tests"
 	},
 	"scripts": {
-		"test": "echo \"Error: no test specified\" && exit 1",
+		"build": "run-s clean build:*",
+		"build:css": "lightningcss --minify resources/src/hearth.css -o resources/dist/hearth.css",
+		"build:js": "esbuild resources/src/*.js --outdir=resources/dist --minify",
+		"clean": "rimraf resources/dist",
 		"prepare": "husky"
 	},
 	"repository": {
@@ -26,11 +29,18 @@
 		"@biomejs/biome": "1.9.4",
 		"@commitlint/cli": "19.6.0",
 		"@commitlint/config-conventional": "19.6.0",
+		"esbuild": "0.24.0",
 		"husky": "9.1.7",
-		"lint-staged": "15.2.10"
+		"lightningcss-cli": "1.28.2",
+		"lint-staged": "15.2.10",
+		"npm-run-all2": "7.0.1",
+		"rimraf": "6.0.1"
 	},
 	"lint-staged": {
 		"*.{css,js,json}": "biome check --write",
 		".php": "vendor/bin/pint"
+	},
+	"dependencies": {
+		"luxon": "3.5.0"
 	}
 }
