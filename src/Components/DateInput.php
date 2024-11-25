@@ -116,51 +116,51 @@ class DateInput extends Component
         $this->months = [
             [
                 'value' => '01',
-                'label' => __('forms.month_january'),
+                'label' => __('hearth-components::forms.month_january'),
             ],
             [
                 'value' => '02',
-                'label' => __('forms.month_february'),
+                'label' => __('hearth-components::forms.month_february'),
             ],
             [
                 'value' => '03',
-                'label' => __('forms.month_march'),
+                'label' => __('hearth-components::forms.month_march'),
             ],
             [
                 'value' => '04',
-                'label' => __('forms.month_april'),
+                'label' => __('hearth-components::forms.month_april'),
             ],
             [
                 'value' => '05',
-                'label' => __('forms.month_may'),
+                'label' => __('hearth-components::forms.month_may'),
             ],
             [
                 'value' => '06',
-                'label' => __('forms.month_june'),
+                'label' => __('hearth-components::forms.month_june'),
             ],
             [
                 'value' => '07',
-                'label' => __('forms.month_july'),
+                'label' => __('hearth-components::forms.month_july'),
             ],
             [
                 'value' => '08',
-                'label' => __('forms.month_august'),
+                'label' => __('hearth-components::forms.month_august'),
             ],
             [
                 'value' => '09',
-                'label' => __('forms.month_september'),
+                'label' => __('hearth-components::forms.month_september'),
             ],
             [
                 'value' => '10',
-                'label' => __('forms.month_october'),
+                'label' => __('hearth-components::forms.month_october'),
             ],
             [
                 'value' => '11',
-                'label' => __('forms.month_november'),
+                'label' => __('hearth-components::forms.month_november'),
             ],
             [
                 'value' => '12',
-                'label' => __('forms.month_december'),
+                'label' => __('hearth-components::forms.month_december'),
             ],
         ];
     }

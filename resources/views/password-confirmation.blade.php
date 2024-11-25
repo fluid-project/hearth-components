@@ -5,10 +5,10 @@
             <p>{{ $message }}</p>
 
             <div x-bind:class="validationError ? 'field field--error' : 'field'">
-                <x-hearth-label for="password" :value="__('auth.label_password')" />
+                <x-hearth-label for="password" :value="__('hearth-components::auth.label_password')" />
                 <x-hearth-input id="password" type="password" name="password" required x-ref="password" x-bind:aria-describedby="validationError ? 'password-error' : ''"/>
                 <template x-cloak x-if="validationError">
-                    <x-hearth-error for="password">{{ __('validation.current_password') }}</x-hearth-error>
+                    <x-hearth-error for="password">{{ __('hearth-components::validation.current_password') }}</x-hearth-error>
                 </template>
             </div>
 
