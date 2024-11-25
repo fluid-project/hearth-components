@@ -30,6 +30,6 @@
 		"lint-staged": "15.2.10"
 	},
 	"lint-staged": {
-		"*.{css,js,json}": "npx @biomejs/biome check --write"
+		"*.{css,js,json}": "biome check --write"
 	}
 }
