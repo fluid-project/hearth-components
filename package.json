@@ -30,6 +30,7 @@
 		"lint-staged": "15.2.10"
 	},
 	"lint-staged": {
-		"*.{css,js,json}": "biome check --write"
+		"*.{css,js,json}": "biome check --write",
+		".php": "vendor/bin/pint"
 	}
 }
