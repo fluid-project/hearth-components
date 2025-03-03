@@ -13,13 +13,16 @@ jobs:
       fail-fast: true
       matrix:
         os: [ubuntu-latest, windows-latest]
-        php: [8.3, 8.2]
-        laravel: [11.*]
+        php: [8.4, 8.3]
+        laravel: [12.*, 11.*]
         stability: [prefer-lowest, prefer-stable]
         include:
           - laravel: 11.*
             testbench: 9.*
             carbon: ^2.63
+          - laravel: 12.*
+            testbench: 10.*
+            carbon: 3.*
 
     name: P${{ matrix.php }} - L${{ matrix.laravel }} - ${{ matrix.stability }} - ${{ matrix.os }}
 
@@ -49,15 +52,15 @@ jobs:
 
       - name: Execute tests
         run: vendor/bin/pest --ci
-        if: matrix.laravel != '11.*' && matrix.php != 8.3 || matrix.stability != 'prefer-stable' || matrix.os != 'ubuntu-latest'
+        if: matrix.laravel != '12.*' && matrix.php != 8.4 || matrix.stability != 'prefer-stable' || matrix.os != 'ubuntu-latest'
 
       - name: Execute tests with coverage
         run: vendor/bin/pest --ci --coverage-clover coverage.xml
-        if: matrix.laravel == '11.*' && matrix.php == 8.3 && matrix.stability == 'prefer-stable' && matrix.os == 'ubuntu-latest'
+        if: matrix.laravel == '12.*' && matrix.php == 8.4 && matrix.stability == 'prefer-stable' && matrix.os == 'ubuntu-latest'
 
       - name: Save code coverage to artifact
         uses: actions/upload-artifact@v4
-        if: matrix.laravel == '11.*' && matrix.php == 8.3 && matrix.stability == 'prefer-stable' && matrix.os == 'ubuntu-latest'
+        if: matrix.laravel == '12.*' && matrix.php == 8.4 && matrix.stability == 'prefer-stable' && matrix.os == 'ubuntu-latest'
         with:
           name: code-coverage
           path: "coverage.xml"
