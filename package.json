@@ -1,6 +1,5 @@
 {
 	"name": "hearth-components",
-	"version": "0.1.0",
 	"description": "Robust components for the Laravel Framework.",
 	"main": "index.js",
 	"type": "module",
