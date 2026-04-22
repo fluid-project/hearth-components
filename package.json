@@ -46,6 +46,6 @@
 		".php": "vendor/bin/pint"
 	},
 	"dependencies": {
-		"luxon": "3.5.0"
+		"luxon": "3.7.2"
 	}
 }
