@@ -13,19 +13,22 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v4.0.0
         with:
           ref: ${{ github.head_ref }}
 
-      - name: Setup Biome
-        uses: biomejs/setup-biome@v2
+      - name: Setup node
+        uses: actions/setup-node@v6.0.0
         with:
-          version: latest
+          node-version-file: .nvmrc
+          cache: npm
 
       - name: Fix CSS and JS code style issues
-        run: biome check --write .
+        run: |
+            npm ci
+            npm run format
 
       - name: Commit changes
-        uses: stefanzweifel/git-auto-commit-action@v5
+        uses: stefanzweifel/git-auto-commit-action@v7.1.0
         with:
           commit_message: "ci: fix code style issues"

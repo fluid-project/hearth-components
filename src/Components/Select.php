@@ -5,6 +5,7 @@ namespace HearthComponents\Components;
 use HearthComponents\Traits\AriaDescribable;
 use HearthComponents\Traits\HandlesValidation;
 use Illuminate\View\Component;
+use Illuminate\View\View;
 
 class Select extends Component
 {
@@ -112,7 +113,7 @@ class Select extends Component
     /**
      * Get the view / contents that represent the component.
      *
-     * @return \Illuminate\View\View
+     * @return View
      */
     public function render()
     {
