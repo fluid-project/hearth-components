@@ -11,6 +11,7 @@
 		"build:css": "lightningcss --minify resources/src/hearth.css -o resources/dist/hearth.css",
 		"build:js": "esbuild resources/src/*.js --outdir=resources/dist --minify",
 		"clean": "rimraf resources/dist",
+		"format": "biome check --write .",
 		"prepare": "husky"
 	},
 	"repository": {

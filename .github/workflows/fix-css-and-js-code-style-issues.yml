@@ -24,7 +24,7 @@ jobs:
           cache: npm
 
       - name: Fix CSS and JS code style issues
-        run: biome check --write .
+        run: npm run format
 
       - name: Commit changes
         uses: stefanzweifel/git-auto-commit-action@v7.1.0
