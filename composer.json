@@ -13,7 +13,7 @@
 	],
 	"require": {
 		"php": "^8.4",
-		"chinleung/laravel-locales": "^2.1",
+		"chinleung/laravel-locales": "^3.0",
 		"codezero/laravel-unique-translation": "^4.3",
 		"commerceguys/intl": "^2.0",
 		"illuminate/contracts": "^12.0",
