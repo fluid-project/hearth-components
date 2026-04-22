@@ -58,7 +58,7 @@ jobs:
         if: matrix.laravel == '12.*' && matrix.php == 8.4 && matrix.stability == 'prefer-stable' && matrix.os == 'ubuntu-latest'
 
       - name: Save code coverage to artifact
-        uses: actions/upload-artifact@v4.0.0
+        uses: actions/upload-artifact@v7.0.1
         if: matrix.laravel == '12.*' && matrix.php == 8.4 && matrix.stability == 'prefer-stable' && matrix.os == 'ubuntu-latest'
         with:
           name: code-coverage
@@ -72,7 +72,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4.0.0
       - name: Fetch code coverage artifact
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v8
         with:
           name: code-coverage
       - name: Upload coverage to Codecov
