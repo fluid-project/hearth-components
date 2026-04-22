@@ -18,7 +18,12 @@
 		"type": "git",
 		"url": "git+https://github.com/fluid-project/hearth-components.git"
 	},
-	"keywords": ["hearth", "laravel", "blade", "components"],
+	"keywords": [
+		"hearth",
+		"laravel",
+		"blade",
+		"components"
+	],
 	"author": "OCAD University <idrc@ocadu.ca>",
 	"license": "BSD-3-Clause",
 	"bugs": {

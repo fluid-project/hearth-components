@@ -48,7 +48,7 @@ const confirmPassword = (
 		const scrollY = document.body.style.top;
 		document.body.style.position = "";
 		document.body.style.top = "";
-		window.scrollTo(0, Number.parseInt(scrollY || "0") * -1);
+		window.scrollTo(0, Number.parseInt(scrollY || "0", 10) * -1);
 		const elems = document.querySelectorAll(
 			"a, button, input, select, textarea, [contenteditable]",
 		);
