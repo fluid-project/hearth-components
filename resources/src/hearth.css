@@ -1,6 +1,7 @@
 @import url(https://fonts.bunny.net/css?family=comic-neue:400,400i,700,700i);
 
 [x-cloak] {
+	/* biome-ignore lint/complexity/noImportantStyles: not applicable to x-cloak */
 	display: none !important;
 }
 

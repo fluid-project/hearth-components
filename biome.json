@@ -7,15 +7,13 @@
 	},
 	"files": {
 		"ignoreUnknown": false,
-		"ignore": ["resources/dist"]
+		"includes": ["**", "!**/resources/dist"]
 	},
 	"formatter": {
 		"enabled": true,
 		"indentStyle": "tab"
 	},
-	"organizeImports": {
-		"enabled": true
-	},
+	"assist": { "actions": { "source": { "organizeImports": "on" } } },
 	"linter": {
 		"enabled": true,
 		"rules": {
