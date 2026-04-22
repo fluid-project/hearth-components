@@ -2,7 +2,9 @@ name: run-tests
 
 on:
   push:
+    branches: [main]
   pull_request:
+    branches: [main]
   workflow_dispatch:
 
 jobs:
@@ -25,10 +27,10 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6.0.2
 
       - name: Setup PHP
-        uses: shivammathur/setup-php@v2
+        uses: shivammathur/setup-php@2.37.0
         with:
           php-version: ${{ matrix.php }}
           extensions: dom, curl, libxml, mbstring, zip, pcntl, pdo, sqlite, pdo_sqlite, bcmath, soap, intl, gd, exif, iconv, imagick, fileinfo
@@ -56,7 +58,7 @@ jobs:
         if: matrix.laravel == '12.*' && matrix.php == 8.4 && matrix.stability == 'prefer-stable' && matrix.os == 'ubuntu-latest'
 
       - name: Save code coverage to artifact
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v4.0.0
         if: matrix.laravel == '12.*' && matrix.php == 8.4 && matrix.stability == 'prefer-stable' && matrix.os == 'ubuntu-latest'
         with:
           name: code-coverage
@@ -68,13 +70,13 @@ jobs:
     needs:
       - test
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v4.0.0
       - name: Fetch code coverage artifact
         uses: actions/download-artifact@v4
         with:
           name: code-coverage
       - name: Upload coverage to Codecov
-        uses: codecov/codecov-action@v5
+        uses: codecov/codecov-action@v5.0.0
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
           fail_ci_if_error: true
