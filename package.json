@@ -34,7 +34,7 @@
 		"@biomejs/biome": "2.4.12",
 		"@commitlint/cli": "19.8.1",
 		"@commitlint/config-conventional": "19.8.1",
-		"esbuild": "0.25.0",
+		"esbuild": "0.28.0",
 		"husky": "9.1.7",
 		"lightningcss-cli": "1.32.0",
 		"lint-staged": "16.4.0",
