@@ -1,5 +1,6 @@
 <?php
 
+use CommerceGuys\Intl\Exception\UnknownLanguageException;
 use CommerceGuys\Intl\Language\LanguageRepository;
 use Illuminate\Support\Str;
 
@@ -19,7 +20,7 @@ if (! function_exists('get_locale_name')) {
             $language = $languages->get($code, $locale);
 
             return $capitalize ? Str::ucfirst($language->getName()) : $language->getName();
-        } catch (CommerceGuys\Intl\Exception\UnknownLanguageException $e) {
+        } catch (UnknownLanguageException $e) {
             return null;
         }
     }
