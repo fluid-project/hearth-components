@@ -10,6 +10,10 @@ Robust components for the Laravel Framework.
 
 ## Installation
 
+### Prerequisites
+
+Hearth Components requires Laravel >= 12.x and PHP >= 8.4.
+
 You can install the package via composer:
 
 ```bash
