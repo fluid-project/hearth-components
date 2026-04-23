@@ -1,12 +1,7 @@
 {
 	"name": "fluid-project/hearth-components",
 	"description": "Robust components for the Laravel Framework.",
-	"keywords": [
-		"hearth",
-		"laravel",
-		"blade",
-		"components"
-	],
+	"keywords": ["hearth", "laravel", "blade", "components"],
 	"homepage": "https://github.com/fluid-project/hearth-components",
 	"license": "BSD-3-Clause",
 	"authors": [
@@ -43,9 +38,7 @@
 		"psr-4": {
 			"HearthComponents\\": "src/"
 		},
-		"files": [
-			"src/helpers.php"
-		]
+		"files": ["src/helpers.php"]
 	},
 	"autoload-dev": {
 		"psr-4": {
@@ -80,9 +73,7 @@
 	},
 	"extra": {
 		"laravel": {
-			"providers": [
-				"HearthComponents\\HearthComponentsServiceProvider"
-			],
+			"providers": ["HearthComponents\\HearthComponentsServiceProvider"],
 			"aliases": {
 				"HearthComponents": "HearthComponents\\Facades\\HearthComponents"
 			}
