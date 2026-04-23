@@ -24,7 +24,7 @@ php artisan vendor:publish --tag="hearth-components-views"
 
 ## Usage
 
-TODO.
+For component usage, see the [wiki](https://github.com/fluid-project/hearth-components/wiki).
 
 ## Testing
 
