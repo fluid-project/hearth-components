@@ -56,11 +56,11 @@ jobs:
 
       - name: Execute tests with coverage
         run: vendor/bin/pest --ci --coverage-clover coverage.xml
-        if: matrix.laravel == '15.*' && matrix.php == 8.5 && matrix.stability == 'prefer-stable' && matrix.os == 'ubuntu-latest'
+        if: matrix.laravel == '13.*' && matrix.php == 8.5 && matrix.stability == 'prefer-stable' && matrix.os == 'ubuntu-latest'
 
       - name: Save code coverage to artifact
         uses: actions/upload-artifact@v7.0.1
-        if: matrix.laravel == '15.*' && matrix.php == 8.5 && matrix.stability == 'prefer-stable' && matrix.os == 'ubuntu-latest'
+        if: matrix.laravel == '13.*' && matrix.php == 8.5 && matrix.stability == 'prefer-stable' && matrix.os == 'ubuntu-latest'
         with:
           name: code-coverage
           path: "coverage.xml"
