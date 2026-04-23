@@ -54,7 +54,7 @@ To test integration in a Laravel application:
 
    ```
    cd hearth-test
-   composer require fluid-project/hearth-components:dev-laravel-13-support
+   composer require fluid-project/hearth-components
    ```
 
 4. Create a new [view route](https://laravel.com/docs/13.x/routing#view-routes) and add components to the view as per the [instructions](https://github.com/fluid-project/hearth-components/wiki).
