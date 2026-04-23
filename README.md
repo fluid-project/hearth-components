@@ -10,6 +10,10 @@ Robust components for the Laravel Framework.
 
 ## Installation
 
+### Prerequisites
+
+Hearth Components requires Laravel >= 12.x and PHP >= 8.4.
+
 You can install the package via composer:
 
 ```bash
@@ -24,13 +28,40 @@ php artisan vendor:publish --tag="hearth-components-views"
 
 ## Usage
 
-TODO.
+For component usage, see the [wiki](https://github.com/fluid-project/hearth-components/wiki).
 
 ## Testing
+
+To run automated tests:
 
 ```bash
 composer test
 ```
+
+To test integration in a Laravel application:
+
+1. Create a new Laravel project for testing.
+
+   ```
+   laravel new hearth-test
+   ```
+
+2. Answer the interactive questions in the installer as follows.
+
+   1. Which starter kit would you like to use? _None_
+   2. Which testing framework do you prefer? _Pest_
+   3. Do you want to install Laravel Boost to improve AI assisted coding? _No_
+   4. Which database will your application use? _SQLite_
+   5. Would you like to run `npm install --ignore-scripts` and `npm run build`? _Yes_
+
+3. Add Hearth to your new Laravel project.
+
+   ```
+   cd hearth-test
+   composer require fluid-project/hearth-components
+   ```
+
+4. Create a new [view route](https://laravel.com/docs/13.x/routing#view-routes) and add components to the view as per the [instructions](https://github.com/fluid-project/hearth-components/wiki).
 
 ## Changelog
 
